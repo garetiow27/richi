@@ -1,0 +1,252 @@
+// Programa que te suma y promedia tus notas; además, te dice si pasaste o no pasaste VAMOS RICHILACTICOS!!!
+
+Console.WriteLine("Programa que te suma y promedia tus notas; además, te dice si pasaste o no pasaste VAMOS RICHILACTICOS!!!");
+Console.WriteLine("==========================================================================================================");
+Console.WriteLine("Elige el curso que quieres promediar");
+Console.WriteLine("1 - Física II");
+Console.WriteLine("2 - Matemática II");
+Console.WriteLine("3 - Base de Datos y Programación Web");
+Console.WriteLine("4 - Realidad nacional");
+Console.WriteLine("5 - Historia de la Civilización");
+Console.WriteLine("6 - Recursos naturales");
+
+int opcion;
+Console.WriteLine(" ");
+Console.WriteLine(" ");
+Console.Write("Opción: ");
+opcion = int.Parse(Console.ReadLine());
+int i;
+float promedio, par, fin;
+switch (opcion)
+{
+    case 1:
+        Console.Clear();
+        float sumaPRA, sumaLAB, sumaCONTROL;
+        float[] PRA = new float[3];
+        float[] LAB = new float[8];
+        float[] CONTROL = new float[2];
+        sumaPRA = 0;
+        sumaLAB = 0;
+        sumaCONTROL = 0;
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Estás en la opción FÍSICA II");
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las mejores tres notas de tus PC's: ");
+        for (i = 0; i < 3; i++)
+        {
+            Console.Write("Ingresa la PRA " + i + ": ");
+            PRA[i] = int.Parse(Console.ReadLine());
+            sumaPRA = sumaPRA + PRA[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las mejores ocho notas de tus Lab's: ");
+        for (i = 0; i < 8; i++)
+        {
+            Console.Write("Ingresa el Lab " + i + ": ");
+            LAB[i] = int.Parse(Console.ReadLine());
+            sumaLAB = sumaLAB + LAB[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las dos notas de tus controles: ");
+        for (i = 0; i < 2; i++)
+        {
+            Console.Write("Ingresa el control " + i + ": ");
+            CONTROL[i] = int.Parse(Console.ReadLine());
+            sumaCONTROL = sumaCONTROL + CONTROL[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu parcial: ");
+        par = int.Parse(Console.ReadLine());
+        Console.Write("Ingresa la nota de tu final: ");
+        fin = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("==========================================================================================================");
+        promedio = ((par + fin + (sumaPRA / 3) + ((sumaLAB + (2 * sumaCONTROL)) / 12)) / 4); 
+        if (promedio >= 10.5)
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("Felicitaciones! Pasaste física II con un promedio de " + promedio);
+        }
+        else
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("No pudiste pasar física II. Tu promedio fue de " + promedio);
+        }
+        break;
+    case 2:
+        Console.Clear();
+
+        float sumapras; 
+        float[] PRAS = new float[4];
+        sumapras = 0;
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Estás en la opción MATEMÁTICA II");
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las cuatro notas de tus PC's: ");
+        for (i = 0; i < 4; i++)
+        {
+            Console.Write("Ingresa la nota " + i + ": ");
+            PRAS[i] = float.Parse(Console.ReadLine());
+            sumapras = sumapras + PRAS[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu parcial: ");
+        par = int.Parse(Console.ReadLine());
+        Console.Write("Ingresa la nota de tu final: ");
+        fin = int.Parse(Console.ReadLine());
+
+        promedio = (par + fin + (sumapras / 4)) / 3;
+        if (promedio >= 10.5)
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("Felicitaciones! Pasaste matemática II con un promedio de " + promedio);
+        }
+        else
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("No pudiste pasar matemática II. Tu promedio fue de " + promedio);
+        }
+        break;
+    case 3:
+        Console.Clear();
+        float sumaPRAC, LAB1;
+        sumaPRAC = 0;
+        float[] prac = new float[2];
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Estás en la opción Base de Datos y Programación Web");
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las dos notas de tus practicas: ");
+        for (i = 0; i < 2; i++)
+        {
+            Console.Write("Ingresa la nota " + i + ": ");
+            prac[i] = float.Parse(Console.ReadLine());
+            sumaPRAC = sumaPRAC + prac[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu LAB: ");
+        LAB1 = float.Parse(Console.ReadLine());
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu parcial: ");
+        par = int.Parse(Console.ReadLine());
+        Console.Write("Ingresa la nota de tu final: ");
+        fin = int.Parse(Console.ReadLine());
+        Console.WriteLine("==========================================================================================================");
+     
+
+        promedio = (par + fin + (sumaPRAC / 2)+(2*LAB1)) / 5;
+        if (promedio >= 10.5)
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("Felicitaciones! Pasaste Base de Datos y Programación Web con un promedio de " + promedio);
+        }
+        else
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("No pudiste pasar Base de Datos y Programación Web. Tu promedio fue de " + promedio);
+        }
+        break;
+    case 4:
+        Console.Clear();
+        float sumaprA;
+        sumaprA = 0;
+        float[] prA = new float[4];
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Estás en la opción Realidad nacional");
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las cuatro notas de tus PC's: ");
+        for (i = 0; i < 4; i++)
+        {
+            Console.Write("Ingresa la nota " + i + ": ");
+            prA[i] = float.Parse(Console.ReadLine());
+            sumaprA = sumaprA + prA[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu parcial: ");
+        par = int.Parse(Console.ReadLine());
+        Console.Write("Ingresa la nota de tu final: ");
+        fin = int.Parse(Console.ReadLine());
+        promedio = (par + fin + (sumaprA / 4)) / 3;
+        if (promedio >= 10.5)
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("Felicitaciones! Pasaste Realidad nacional con un promedio de " + promedio);
+        }
+        else
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("No pudiste pasar Realidad nacional. Tu promedio fue de " + promedio);
+        }
+        break;
+    case 5:
+        Console.Clear();
+        float sumas;
+        sumas = 0;
+        float[] Pra = new float[3];
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Estás en la opción Historia de la Civilización");
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las tres notas de tus PC's: ");
+        for (i = 0; i < 3; i++)
+        {
+            Console.Write("Ingresa la nota " + i + ": ");
+            Pra[i] = float.Parse(Console.ReadLine());
+            sumas = sumas + Pra[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu parcial: ");
+        par = int.Parse(Console.ReadLine());
+        Console.Write("Ingresa la nota de tu final: ");
+        fin = int.Parse(Console.ReadLine());
+        promedio = (par + fin + (sumas / 3)) / 3;
+        if (promedio >= 10.5)
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("Felicitaciones! Pasaste Historia de la Civilización con un promedio de " + promedio);
+        }
+        else
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("No pudiste pasar Historia de la Civilización. Tu promedio fue de " + promedio);
+        }
+        break;
+    case 6:
+        Console.Clear();
+        float PRRAS, TRA;
+        PRRAS = 0;
+        float[] Pr = new float[2];
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Estás en la opción Recursos naturales");
+        Console.WriteLine("==========================================================================================================");
+        Console.WriteLine("Ingresa las dos notas de tus PC's: ");
+        for (i = 0; i < 2; i++)
+        {
+            Console.Write("Ingresa la nota " + i + ": ");
+            Pr[i] = float.Parse(Console.ReadLine());
+            PRRAS = PRRAS + Pr[i];
+        }
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu trabajo de investigación: ");
+        TRA = int.Parse(Console.ReadLine());
+        Console.WriteLine("==========================================================================================================");
+        Console.Write("Ingresa la nota de tu parcial: ");
+        par = int.Parse(Console.ReadLine());
+        Console.Write("Ingresa la nota de tu final: ");
+        fin = int.Parse(Console.ReadLine());
+        promedio = (par + fin + TRA + (2*(PRRAS/2)))/5;
+        if (promedio >= 10.5)
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("Felicitaciones! Pasaste Recursos naturales con un promedio de " + promedio);
+        }
+        else
+        {
+            Console.WriteLine("==========================================================================================================");
+            Console.WriteLine("No pudiste pasar Recursos naturales. Tu promedio fue de " + promedio);
+        }
+        break;
+    default:
+        Console.Clear();
+        Console.WriteLine("Ese curso no existe perro");
+        break;
+
+}
